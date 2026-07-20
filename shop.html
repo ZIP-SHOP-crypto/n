@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Boutique | FN Business Agency
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="responsive.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ============================= -->
+<!-- HEADER -->
+<!-- ============================= -->
+
+
+<header>
+
+
+<nav>
+
+
+<div class="container">
+
+
+
+<div class="logo">
+
+
+<a href="index.html">
+
+FN Business Agency
+
+</a>
+
+
+</div>
+
+
+
+
+<ul class="menu">
+
+
+<li>
+
+<a href="index.html">
+
+Accueil
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="shop.html" class="active">
+
+Boutique
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="blog.html">
+
+Blog
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+
+
+<div class="icons">
+
+
+<a href="#">
+
+<i class="fa-regular fa-user"></i>
+
+</a>
+
+
+
+<a href="cart.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span class="badge">
+
+0
+
+</span>
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</nav>
+
+
+</header>
+/* ================================= */
+/* BANNIERE BOUTIQUE */
+/* ================================= */
+
+<section class="shop-banner">
+
+
+    <div class="container">
+
+
+        <div class="shop-banner-content">
+
+
+            <h1>
+                Notre Boutique
+            </h1>
+
+
+            <p>
+                Découvrez nos collections de vêtements,
+                chaussures, chapeaux et accessoires.
+            </p>
+
+
+            <a href="#products" class="btn btn-primary">
+
+                Explorer les produits
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- ================================= -->
+<!-- RECHERCHE ET FILTRES -->
+<!-- ================================= -->
+
+
+<section class="shop-area" id="products">
+
+
+<div class="container">
+
+
+
+<div class="shop-tools">
+
+
+
+<!-- Recherche -->
+
+
+<div class="search-product">
+
+
+<input
+type="search"
+id="productSearch"
+placeholder="Rechercher un produit...">
+
+
+<button>
+
+<i class="fa-solid fa-search"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- Tri -->
+
+
+<div class="sort-product">
+
+
+<select id="sortProduct">
+
+
+<option value="default">
+
+Trier par
+
+</option>
+
+
+<option value="low">
+
+Prix croissant
+
+</option>
+
+
+
+<option value="high">
+
+Prix décroissant
+
+</option>
+
+
+
+<option value="new">
+
+Nouveautés
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- FILTRES CATEGORIES -->
+
+
+<div class="shop-filter">
+
+
+
+<button class="active"
+data-category="all">
+
+Tous
+
+</button>
+
+
+
+<button
+data-category="homme">
+
+Homme
+
+</button>
+
+
+
+<button
+data-category="femme">
+
+Femme
+
+</button>
+
+
+
+<button
+data-category="chaussures">
+
+Chaussures
+
+</button>
+
+
+
+<button
+data-category="sacs">
+
+Sacs
+
+</button>
+
+
+
+<button
+data-category="accessoires">
+
+Accessoires
+
+</button>
+
+
+
+</div>
+<!-- ================================= -->
+<!-- LISTE DES PRODUITS -->
+<!-- ================================= -->
+
+
+<div class="shop-products" id="productList">
+
+
+
+<!-- PRODUIT 1 -->
+
+
+<div class="shop-card" data-category="chaussures">
+
+
+<img
+src="ACCESOIRE/CHESSURE.jpg"
+alt="Chaussure">
+
+
+<div class="shop-content">
+
+
+<span class="category">
+
+Chaussures
+
+</span>
+
+
+
+<h3>
+
+Sneakers Premium
+
+</h3>
+
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+
+<p class="price">
+
+10000FCF
+
+</p>
+
+
+
+<div class="shop-buttons">
+
+
+<button class="cart-btn">
+
+Ajouter au panier
+
+</button>
+
+
+
+<a href="DJOGIN.html"
+class="details-btn">
+
+Voir
+
+</a>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- PRODUIT 2 -->
+
+
+<div class="shop-card" data-category="homme">
+
+
+<img
+src="ACCESOIRE/CHEMISE.jpg"
+alt="Chemise">
+
+
+<div class="shop-content">
+
+
+<span class="category">
+
+Homme
+
+</span>
+
+
+
+<h3>
+
+Chemise élégante
+
+</h3>
+
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+
+<p class="price">
+
+3000CF
+
+</p>
+
+
+
+<div class="shop-buttons">
+
+
+<button class="cart-btn">
+
+Ajouter au panier
+
+</button>
+
+
+
+<a href="DJOGIN.html"
+class="details-btn">
+
+Voir
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PRODUIT 3 -->
+
+
+<div class="shop-card" data-category="femme">
+
+
+<img
+src="ACCESOIRE/DJOGIN.jpg"
+alt="DJOGIN">
+
+
+<div class="shop-content">
+
+
+<span class="category">
+
+Femme
+
+</span>
+
+
+
+<h3>
+
+DJOGIN DE L'Heures
+
+</h3>
+
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+
+<p class="price">
+
+8000FCF
+
+</p>
+
+
+
+<div class="shop-buttons">
+
+
+<button class="cart-btn">
+
+Ajouter au panier
+
+</button>
+
+
+
+<a href="DJOGIN.html"
+class="details-btn">
+
+Voir
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PRODUIT 4 -->
+
+
+<div class="shop-card" data-category="accessoires">
+
+
+<img
+src="ACCESOIRE/acesoire.jpg"
+alt="KAKO">
+
+
+<div class="shop-content">
+
+
+<span class="category">
+
+Accessoires
+
+</span>
+
+
+
+<h3>
+
+
+
+</h3>
+
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+
+<p class="price">
+
+12000FCF
+
+</p>
+
+
+
+<div class="shop-buttons">
+
+
+<button class="cart-btn">
+
+Ajouter au panier
+
+</button>
+
+
+
+<a href="DJOGIN.html"
+class="details-btn">
+
+Voir
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PRODUIT 5 -->
+
+
+<div class="shop-card" data-category="sacs">
+
+
+<img
+src="ACCESOIRE/SACS.jpg"
+alt="Sac">
+
+
+<div class="shop-content">
+
+
+<span class="category">
+
+Sacs
+
+</span>
+
+
+
+<h3>
+
+Sac Premium
+
+</h3>
+
+
+
+<div class="rating">
+
+⭐⭐⭐⭐⭐
+
+</div>
+
+
+
+<p class="price">
+
+3000FCF
+
+</p>
+
+
+
+<div class="shop-buttons">
+
+
+<button class="cart-btn">
+
+Ajouter au panier
+
+</button>
+
+
+
+<a href="DJOGIN.html"
+class="details-btn">
+
+Voir
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================================= -->
+<!-- NEWSLETTER -->
+<!-- ================================= -->
+
+
+<section class="newsletter">
+
+
+<div class="container">
+
+
+<h2>
+
+Restez informé de nos nouveautés
+
+</h2>
+
+
+
+<form>
+
+
+<input
+type="email"
+placeholder="Votre email">
+
+
+<button>
+
+S'inscrire
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================================= -->
+<!-- FOOTER -->
+<!-- ================================= -->
+
+
+<footer class="footer">
+
+
+<div class="container footer-container">
+
+
+
+<div class="footer-column">
+
+
+<h3>
+
+FN Business Agency
+
+</h3>
+
+
+<p>
+
+L'élégance et le style,
+notre signature.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+
+Navigation
+
+</h3>
+
+
+<ul>
+
+<li>
+<a href="index.html">
+Accueil
+</a>
+</li>
+
+
+<li>
+<a href="shop.html">
+Boutique
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+
+Suivez-nous
+
+</h3>
+
+
+<div class="social-links">
+
+
+<a href="#">
+<i class="fa-brands fa-facebook"></i>
+</a>
+
+
+<a href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+
+<a href="#">
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="copyright">
+
+
+<p>
+
+© 2026 FN Business Agency
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+
+</html>
