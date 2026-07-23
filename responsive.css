@@ -257,13 +257,19 @@
 
 
 /* HEADER */
+/* La nav reste sur une ligne (logo + hamburger + trois-points) : */
+/* elle ne prend plus toute la hauteur de l'ecran au chargement. */
 
 
 nav .container {
 
-    flex-direction: column;
+    flex-direction: row;
 
-    gap: 20px;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+
+    gap: 10px;
 
 }
 
@@ -271,7 +277,50 @@ nav .container {
 
 .logo a {
 
-    font-size: 22px;
+    font-size: 20px;
+
+}
+
+
+
+/* Le panneau (menu + recherche + icones) est cache par defaut */
+/* et s'affiche en tiroir sous la nav quand on tape sur le hamburger. */
+
+.nav-collapse {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 20px;
+
+    background: var(--white-color);
+
+    box-shadow: var(--shadow);
+
+    padding: 20px 5%;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+}
+
+
+
+.nav-collapse.active {
+
+    display: flex;
 
 }
 
@@ -291,11 +340,33 @@ nav .container {
 
 
 
+.search-box {
+
+    width: 100%;
+
+}
+
+
+
+.search-box input {
+
+    width: 100%;
+
+}
+
 
 
 .icons {
 
     justify-content: center;
+
+}
+
+
+
+.hamburger {
+
+    display: block;
 
 }
 
