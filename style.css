@@ -2322,3 +2322,200 @@ nav .container {
     color: black;
 
 }
+
+
+/* ============================= */
+/* MODAL ZOOM IMAGE */
+/* ============================= */
+
+.image-modal {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.image-modal img {
+
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+
+}
+
+.close-modal {
+
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+
+}
+
+.zoom-image {
+
+    cursor: zoom-in;
+
+}
+
+/* ========================================= */
+/* PANNEAU REPLIABLE (MENU + RECHERCHE + ICONES) */
+/* ========================================= */
+
+.nav-collapse {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+/* ========================================= */
+/* BOUTON HAMBURGER (cache sur ordinateur) */
+/* ========================================= */
+
+.hamburger {
+
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+/* ========================================= */
+/* MENU TROIS POINTS */
+/* ========================================= */
+
+.more-menu {
+
+    position: relative;
+
+}
+
+.more-btn {
+
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: var(--transition);
+
+}
+
+.more-btn:hover {
+
+    color: var(--secondary-color);
+
+}
+
+.more-dropdown {
+
+    display: none;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    background: var(--white-color);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    min-width: 230px;
+    padding: 8px;
+    z-index: 2000;
+
+}
+
+.more-dropdown.active {
+
+    display: block;
+
+}
+
+.more-dropdown a {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 6px;
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: var(--transition);
+
+}
+
+.more-dropdown a:hover {
+
+    background: var(--light-color);
+    color: var(--secondary-color);
+
+}
+
+.translate-item {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+
+}
+
+.translate-item i {
+
+    color: var(--primary-color);
+
+}
+
+.translate-item select {
+
+    flex: 1;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--white-color);
+    cursor: pointer;
+
+}
+
+/* ========================================= */
+/* BOUTONS SECTION A PROPOS */
+/* ========================================= */
+
+.about-buttons {
+
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+
+/* ========================================= */
+/* MESSAGE "AUCUN RESULTAT" POUR LA RECHERCHE */
+/* ========================================= */
+
+.no-results {
+
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-color);
+    font-size: 16px;
+    width: 100%;
+
+}
