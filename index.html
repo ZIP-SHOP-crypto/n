@@ -122,7 +122,7 @@ Livraison gratuite à partir de 1000FCF
 
 <div class="right">
 
-<a href="#">
+<a href="tel:+237686253914">
 
 <i class="fa-solid fa-phone"></i>
 
@@ -130,7 +130,7 @@ Livraison gratuite à partir de 1000FCF
 
 </a>
 
-<a href="#">
+<a href="mailto:contact@zipshop.com">
 
 <i class="fa-solid fa-envelope"></i>
 
@@ -494,7 +494,7 @@ aria-label="Ouvrir le menu">
 
                 <h3>Vêtements</h3>
 
-                <a href="#">
+                <a href="shop.html">
                     Voir plus
                 </a>
 
@@ -508,7 +508,7 @@ aria-label="Ouvrir le menu">
 
                 <h3>Chaussures</h3>
 
-                <a href="#">
+                <a href="shop.html">
                     Voir plus
                 </a>
 
@@ -522,7 +522,7 @@ aria-label="Ouvrir le menu">
 
                 <h3>Chapeaux</h3>
 
-                <a href="#">
+                <a href="shop.html">
                     Voir plus
                 </a>
 
@@ -536,7 +536,7 @@ aria-label="Ouvrir le menu">
 
                 <h3>Sacs</h3>
 
-                <a href="#">
+                <a href="shop.html">
                     Voir plus
                 </a>
 
@@ -2277,6 +2277,29 @@ D'expérience
 </div>
 
 <script src="js/script.js" defer></script>
+
+<!-- CORRECTIF : ouverture/fermeture du menu "trois points" -->
+<!-- Ce script est ajoute car script.js ne gerait pas encore ce menu -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var moreBtn = document.getElementById('moreBtn');
+    var moreDropdown = document.getElementById('moreDropdown');
+
+    if (moreBtn && moreDropdown) {
+        moreBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            moreDropdown.classList.toggle('open');
+        });
+
+        // Fermer le menu si on clique ailleurs sur la page
+        document.addEventListener('click', function (e) {
+            if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
+                moreDropdown.classList.remove('open');
+            }
+        });
+    }
+});
+</script>
 
 </body>
 
