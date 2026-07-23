@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <script src="script.js"></script>
 
     <!-- ========================= -->
     <!-- META -->
@@ -19,7 +18,7 @@
 
     <meta
         name="description"
-        content="FN Business Agency - Boutique en ligne spécialisée dans la vente de vêtements, chaussures, sacs, montres, chapeaux et accessoires.">
+        content="ZIP SHOP - Boutique en ligne spécialisée dans la vente de vêtements, chaussures, sacs, montres, chapeaux et accessoires.">
 
     <meta
         name="keywords"
@@ -27,13 +26,13 @@
 
     <meta
         name="author"
-        content="FN Business Agency">
+        content="ZIP SHOP">
 
     <!-- ========================= -->
     <!-- TITRE -->
     <!-- ========================= -->
 
-    <title>FN Business Agency | Fashion Store</title>
+    <title>ZIP SHOP| Fashion Store</title>
 
     <!-- ========================= -->
     <!-- FAVICON -->
@@ -127,7 +126,7 @@ Livraison gratuite à partir de 1000FCF
 
 <i class="fa-solid fa-phone"></i>
 
-+237 6 XX XX XX XX
++237 6 86253914
 
 </a>
 
@@ -135,7 +134,7 @@ Livraison gratuite à partir de 1000FCF
 
 <i class="fa-solid fa-envelope"></i>
 
-contact@fnbusinessagency.com
+contact@zipshop.com
 
 </a>
 
@@ -159,11 +158,17 @@ contact@fnbusinessagency.com
 
 <a href="index.html">
 
-FN Business Agency
+ZIP SHOP
 
 </a>
 
 </div>
+
+<!-- PANNEAU REPLIABLE : MENU + RECHERCHE + ICONES -->
+<!-- Sur mobile, ce bloc entier se replie derriere le bouton hamburger -->
+<!-- pour que la nav ne prenne plus toute la hauteur de l'ecran. -->
+
+<div class="nav-collapse" id="navCollapse">
 
 <!-- MENU -->
 
@@ -181,7 +186,7 @@ Accueil
 
 <li>
 
-<a href="DJOGIN.html">
+<a href="index.html#about">
 
 À propos
 
@@ -201,9 +206,9 @@ Boutique
 
 <li>
 
-<a href="DJOGIN.html">
+<a href="gallery.html">
 
-Blog
+Collection
 
 </a>
 
@@ -219,17 +224,30 @@ Contact
 
 </li>
 
+<li>
+
+<a href="prix.html">
+
+Nos Prix
+
+</a>
+
+</li>
+
 </ul>
 
 <!-- RECHERCHE -->
 
-<div class="search-box">
+<div class="search-box" id="searchBox">
 
 <input
 type="text"
+id="searchInput"
 placeholder="Rechercher un produit...">
 
-<button>
+<button
+type="button"
+id="searchBtn">
 
 <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -247,11 +265,11 @@ placeholder="Rechercher un produit...">
 
 </a>
 
-<a href="#">
+<a href="#" id="favIcon">
 
 <i class="fa-regular fa-heart"></i>
 
-<span class="badge">
+<span class="badge" id="favCount">
 
 0
 
@@ -259,11 +277,11 @@ placeholder="Rechercher un produit...">
 
 </a>
 
-<a href="#">
+<a href="#" id="cartIcon">
 
 <i class="fa-solid fa-cart-shopping"></i>
 
-<span class="badge">
+<span class="badge" id="cartCount">
 
 0
 
@@ -272,6 +290,74 @@ placeholder="Rechercher un produit...">
 </a>
 
 </div>
+
+</div>
+
+<!-- MENU TROIS POINTS : lien, telechargement, traduction -->
+
+<div class="more-menu" id="moreMenu">
+
+<button
+type="button"
+class="more-btn"
+id="moreBtn"
+aria-label="Plus d'options">
+
+<i class="fa-solid fa-ellipsis-vertical"></i>
+
+</button>
+
+<div class="more-dropdown" id="moreDropdown">
+
+<a href="#" id="copyLinkBtn">
+
+<i class="fa-solid fa-link"></i>
+Enregistrer / copier le lien
+
+</a>
+
+<a href="#" id="downloadBtn">
+
+<i class="fa-solid fa-download"></i>
+Télécharger la page
+
+</a>
+
+<div class="translate-item">
+
+<i class="fa-solid fa-language"></i>
+
+<select id="translateSelect">
+
+<option value="">Traduire en...</option>
+<option value="en">Anglais</option>
+<option value="es">Espagnol</option>
+<option value="de">Allemand</option>
+<option value="it">Italien</option>
+<option value="pt">Portugais</option>
+<option value="ar">Arabe</option>
+<option value="zh-CN">Chinois</option>
+<option value="ja">Japonais</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BOUTON HAMBURGER (mobile uniquement) -->
+
+<button
+type="button"
+class="hamburger"
+id="hamburgerBtn"
+aria-label="Ouvrir le menu">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
 
 </div>
 
@@ -289,7 +375,7 @@ placeholder="Rechercher un produit...">
         <div class="hero-content">
 
             <span class="hero-subtitle">
-                Bienvenue chez FN Business Agency
+                Bienvenue chez ZIP SHOP
             </span>
 
             <h1>
@@ -445,7 +531,7 @@ placeholder="Rechercher un produit...">
             <div class="category-card">
 
                 <img
-                    src=""
+                    src="ACCESOIRE/IME.jpg"
                     alt="Sacs">
 
                 <h3>Sacs</h3>
@@ -490,6 +576,7 @@ placeholder="Rechercher un produit...">
                 </span>
 
                 <img
+                    class="zoom-image"
                     src="ACCESOIRE/AIR.jpg"
                     alt="Chaussure">
 
@@ -524,13 +611,14 @@ placeholder="Rechercher un produit...">
             <div class="product-card">
 
                 <img
-                    src="images/products/shirt1.jpg"
+                    class="zoom-image"
+                    src="ACCESOIRE/C.jpg"
                     alt="Chemise">
 
                 <h3>Chemise Premium</h3>
 
                 <p class="price">
-                    
+                    12000 FCF
                 </p>
 
                 <div class="product-buttons">
@@ -562,13 +650,14 @@ placeholder="Rechercher un produit...">
                 </span>
 
                 <img
-                    src="images/products/watch1.jpg"
+                    class="zoom-image"
+                    src="ACCESOIRE/MONTRE.jpg"
                     alt="Montre">
 
                 <h3>Montre Élégance</h3>
 
                 <p class="price">
-                    120,00 €
+                    5000FCF
                 </p>
 
                 <div class="product-buttons">
@@ -596,13 +685,14 @@ placeholder="Rechercher un produit...">
             <div class="product-card">
 
                 <img
-                    src="images/products/bag1.jpg"
-                    alt="Sac">
+                    class="zoom-image"
+                    src="ACCESOIRE/IME.jpg"
+                    alt="Sac Fashion">
 
                 <h3>Sac Fashion</h3>
 
                 <p class="price">
-                    54,99 €
+                    15000 FCF
                 </p>
 
                 <div class="product-buttons">
@@ -642,7 +732,7 @@ placeholder="Rechercher un produit...">
 
             <img
                 src="ACCESOIRE/F.png"
-                alt="FN Business Agency">
+                alt="zip shop">
 
         </div>
 
@@ -653,12 +743,12 @@ placeholder="Rechercher un produit...">
             </span>
 
             <h2>
-                FN Business Agency, votre boutique de mode de confiance.
+                zip shop, votre boutique de mode de confiance.
             </h2>
 
             <p>
 
-                FN Business Agency est une boutique moderne spécialisée
+                zip shop est une boutique moderne spécialisée
                 dans la vente de vêtements, chaussures, sacs,
                 montres, chapeaux et accessoires pour hommes,
                 femmes et enfants.
@@ -719,11 +809,21 @@ placeholder="Rechercher un produit...">
 
             </div>
 
-            <a href="#shop" class="btn btn-primary">
+            <div class="about-buttons">
 
-                Découvrir la boutique
+                <a href="#shop" class="btn btn-primary">
 
-            </a>
+                    Découvrir la boutique
+
+                </a>
+
+                <a href="prix.html" class="btn btn-secondary">
+
+                    Voir nos prix
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -848,7 +948,7 @@ placeholder="Rechercher un produit...">
             <div class="shop-card">
 
                 <img
-                    src="images/products/product2.jpg"
+                    src="ACCESOIRE/IME.jpg"
                     alt="Sac">
 
                 <div class="shop-content">
@@ -873,7 +973,7 @@ placeholder="Rechercher un produit...">
 
                     <p class="price">
 
-                        68 €
+                        20000 FCF
 
                     </p>
 
@@ -1034,7 +1134,7 @@ placeholder="Rechercher un produit...">
         <div class="promotion-image">
 
             <img
-                src="images/promotion/promo.png"
+                src="ACCESOIRE/CE1.jpg"
                 alt="Promotion">
 
         </div>
@@ -1244,7 +1344,7 @@ placeholder="Rechercher un produit...">
                 <p>
 
                     "Une boutique moderne avec beaucoup de choix.
-                    Je recommande fortement FN Business Agency."
+                    Je recommande fortement ZIP SHOP."
 
                 </p>
 
@@ -1719,7 +1819,7 @@ D'expérience
                         </h3>
 
                         <p>
-                            contact@fnbusinessagency.com
+                            contact@zipshop.com
                         </p>
 
                     </div>
@@ -1871,7 +1971,7 @@ D'expérience
 
             <div class="footer-logo">
 
-                FN Business Agency
+                ZIP SHOP
 
             </div>
 
@@ -2155,7 +2255,7 @@ D'expérience
 
         <p>
 
-            © 2026 FN Business Agency.
+            © 2026 ZIP SHOP
             Tous droits réservés.
 
         </p>
@@ -2170,8 +2270,13 @@ D'expérience
 <!-- JAVASCRIPT -->
 <!-- =========================================== -->
 
-<script src="script.js"></script>
+<!-- MODAL ZOOM IMAGE -->
+<div class="image-modal" id="imageModal">
+    <span class="close-modal">&times;</span>
+    <img id="modalImage" src="" alt="Aperçu produit">
+</div>
 
+<script src="js/script.js" defer></script>
 
 </body>
 
