@@ -44,22 +44,6 @@
         type="image/png">
 
     <!-- ========================= -->
-    <!-- CSS PRINCIPAL -->
-    <!-- ========================= -->
-
-    <link
-        rel="stylesheet"
-        href="css/style.css">
-
-    <!-- ========================= -->
-    <!-- RESPONSIVE -->
-    <!-- ========================= -->
-
-    <link
-        rel="stylesheet"
-        href="css/responsive.css">
-
-    <!-- ========================= -->
     <!-- FONT AWESOME -->
     <!-- ========================= -->
 
@@ -2276,30 +2260,7 @@ D'expérience
     <img id="modalImage" src="" alt="Aperçu produit">
 </div>
 
-<script src="js/script.js" defer></script>
-
-<!-- CORRECTIF : ouverture/fermeture du menu "trois points" -->
-<!-- Ce script est ajoute car script.js ne gerait pas encore ce menu -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    var moreBtn = document.getElementById('moreBtn');
-    var moreDropdown = document.getElementById('moreDropdown');
-
-    if (moreBtn && moreDropdown) {
-        moreBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            moreDropdown.classList.toggle('open');
-        });
-
-        // Fermer le menu si on clique ailleurs sur la page
-        document.addEventListener('click', function (e) {
-            if (!moreDropdown.contains(e.target) && e.target !== moreBtn) {
-                moreDropdown.classList.remove('open');
-            }
-        });
-    }
-});
-</script>
+<script src="script.js" defer></script>
 
 </body>
 
